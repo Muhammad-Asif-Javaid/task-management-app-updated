@@ -1,16 +1,57 @@
-# task_management_app
+# Task Management App (Flutter)
 
-A new Flutter project.
+A simple and visually appealing task management application built with Flutter.
+The app allows users to add, delete, and mark tasks as completed, with data persisted locally using SharedPreferences.
 
-## Getting Started
+This project was developed as part of **Week 3 – Final Project** during an internship to combine state management, local storage, and UI enhancements in Flutter.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Add new tasks
+- Mark tasks as completed
+- Delete tasks
+- Persistent local storage using SharedPreferences
+- Clean and colorful UI
+- Custom AppBar with action button
+- Splash screen on app launch
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Technologies Used
+
+- Flutter
+- Dart
+- SharedPreferences
+- Material Design (Material 3)
+
+---
+
+## Project Structure
+
+lib/
+├── main.dart
+├── TaskScreen.dart
+├── SplashScreen.dart
+
+## Setup Instructions
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+git clone https://github.com/Muhammad-Asif-Javaid/task-management-app.git
+
+2. Navigate to the project directory
+cd task-management-app
+
+3. Install dependencies
+flutter pub get
+
+4. Run the app
+flutter run
+
+Author
+Muhammad Asif Javaid
+
+6. 
