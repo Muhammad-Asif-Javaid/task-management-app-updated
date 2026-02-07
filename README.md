@@ -42,16 +42,19 @@ Follow these steps to run the project locally:
 ### 1. Clone the repository
 git clone https://github.com/Muhammad-Asif-Javaid/task-management-app.git
 
-2. Navigate to the project directory
+### 2. Navigate to the project directory
+
 cd task-management-app
 
-3. Install dependencies
+### 3. Install dependencies
+
 flutter pub get
 
-4. Run the app
+### 4. Run the app
+
 flutter run
 
-Author
+### Author
+
 Muhammad Asif Javaid
 
-6. 
