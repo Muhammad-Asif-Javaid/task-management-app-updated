@@ -1,6 +1,9 @@
 import 'dart:convert';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:task_management_app/login_screen.dart';
+import 'package:task_management_app/utils/utils.dart';
 
 class Taskscreen extends StatefulWidget {
   const Taskscreen({super.key});
@@ -114,7 +117,7 @@ class _TaskscreenState extends State<Taskscreen> {
       ),
     );
   }
-
+final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,6 +144,15 @@ class _TaskscreenState extends State<Taskscreen> {
             icon: const Icon(Icons.add, color: Colors.white),
             onPressed: _showAddDialog,
           ),
+          IconButton(onPressed: (){
+            auth.signOut().then((value){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+            }).onError((error , stackTrace){
+              Utils().toastMessage(error.toString());
+            });
+          }
+              , icon: Icon(Icons.logout_outlined , color: Colors.white,)),
+          SizedBox(width: 10,)
         ],
       ),
 

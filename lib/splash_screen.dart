@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:task_management_app/firebase_services/splash_services.dart';
 import 'TaskScreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -10,16 +11,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  SplashServices splashScreen = SplashServices();
   @override
   void initState() {
     super.initState();
+    splashScreen.isLogin(context);
 
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const Taskscreen()),
-      );
-    });
+    // Timer(const Duration(seconds: 2), () {
+    //   Navigator.pushReplacement(
+    //     context,
+    //     MaterialPageRoute(builder: (_) => const Taskscreen()),
+    //   );
+    // });
   }
 
   @override
